@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 const HeroInfo = (props) => {
   const [hero, setHero] = useState({})
-  const { heroSlug } = props.match.params
+  const { heroSlug } = useParams();
 
   useEffect(() => {
     const fetchHero = async () => {
@@ -15,7 +15,7 @@ const HeroInfo = (props) => {
     };
 
     fetchHero();
-  }, []);
+  }, [heroSlug]);
 
 
   return (
