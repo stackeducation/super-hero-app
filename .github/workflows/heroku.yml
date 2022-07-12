@@ -67,5 +67,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "super-hero-app-name"
-          heroku_email: "youremail@email.com"
+          heroku_app_name: "super-hero-app-hjamison"
+          heroku_email: "hollisjamison@gmail.com"
